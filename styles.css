@@ -62,6 +62,34 @@ main {
     font-size: 1.1rem;
 }
 
+.workflow-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.step {
+    background: #f8fafc;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+    text-align: center;
+}
+
+.step strong {
+    display: block;
+    color: #4a5568;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.step p {
+    color: #718096;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
 .calculator {
     display: flex;
     gap: 1rem;
@@ -134,6 +162,10 @@ footer {
     
     main {
         padding: 0 1rem;
+    }
+    
+    .workflow-steps {
+        grid-template-columns: 1fr;
     }
 }
 
