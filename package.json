@@ -1,0 +1,24 @@
+{
+  "name": "devops-demo",
+  "version": "1.0.0",
+  "description": "A demo project showcasing GitHub Actions DevOps practices",
+  "main": "script.js",
+  "scripts": {
+    "test": "node test.js",
+    "lint": "node lint.js",
+    "build": "echo 'Build completed successfully'",
+    "start": "python3 -m http.server 8000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eduardruzga/devops-demo.git"
+  },
+  "keywords": [
+    "devops",
+    "github-actions",
+    "ci-cd",
+    "testing"
+  ],
+  "author": "Eduard Ruzga",
+  "license": "MIT"
+}

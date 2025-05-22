@@ -1,0 +1,48 @@
+name: PR Status Check
+
+on:
+  pull_request:
+    branches: [ main ]
+    types: [opened, synchronize, reopened]
+
+jobs:
+  quality-gate:
+    runs-on: ubuntu-latest
+    name: 🔒 Quality Gate
+    
+    steps:
+    - name: 📦 Checkout code
+      uses: actions/checkout@v4
+      
+    - name: 🚀 Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        
+    - name: 📊 Code Quality Check
+      run: |
+        echo "🔍 Running comprehensive quality checks..."
+        npm run lint
+        echo "✅ Linting passed"
+        
+    - name: 🧪 Test Suite
+      run: |
+        echo "🧪 Running test suite..."
+        npm test
+        echo "✅ All tests passed"
+        
+    - name: 🏗️ Build Verification
+      run: |
+        echo "🏗️ Verifying build process..."
+        npm run build
+        echo "✅ Build successful"
+        
+    - name: 📝 PR Summary
+      run: |
+        echo "## 🎉 Quality Gate Passed!" >> $GITHUB_STEP_SUMMARY
+        echo "All checks have passed successfully:" >> $GITHUB_STEP_SUMMARY
+        echo "- ✅ Code linting" >> $GITHUB_STEP_SUMMARY
+        echo "- ✅ Unit tests" >> $GITHUB_STEP_SUMMARY
+        echo "- ✅ Build verification" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "This PR is ready for review and merge! 🚀" >> $GITHUB_STEP_SUMMARY

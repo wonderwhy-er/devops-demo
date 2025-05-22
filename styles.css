@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+header p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.demo-section, .calculator-section, .status-section {
+    background: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.demo-section h2, .calculator-section h2, .status-section h2 {
+    color: #4a5568;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.demo-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.demo-section li {
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.calculator {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.calculator input, .calculator select, .calculator button {
+    padding: 0.75rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.calculator input {
+    width: 150px;
+}
+
+.calculator button {
+    background: #667eea;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.calculator button:hover {
+    background: #5a67d8;
+}
+
+#result {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f7fafc;
+    border-radius: 5px;
+    font-weight: bold;
+    min-height: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+#build-info {
+    background: #f0fff4;
+    padding: 1rem;
+    border-radius: 5px;
+    border-left: 4px solid #48bb78;
+}
+
+#deploy-time {
+    font-weight: bold;
+    color: #2d3748;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .calculator {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .calculator input {
+        width: 100%;
+    }
+    
+    main {
+        padding: 0 1rem;
+    }
+}
+
+.error {
+    color: #e53e3e;
+    background: #fed7d7;
+}
+
+.success {
+    color: #38a169;
+    background: #c6f6d5;
+}

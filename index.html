@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Demo - GitHub Actions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🚀 DevOps Demo Project</h1>
+        <p>Showcasing GitHub Actions CI/CD Pipeline</p>
+    </header>
+    
+    <main>
+        <section class="demo-section">
+            <h2>Features Demonstrated</h2>
+            <ul>
+                <li>✅ Automated testing on Pull Requests</li>
+                <li>✅ Code linting and validation</li>
+                <li>✅ Automated deployment to GitHub Pages</li>
+                <li>✅ Branch protection rules</li>
+            </ul>
+        </section>
+        
+        <section class="calculator-section">
+            <h2>Simple Calculator</h2>
+            <div class="calculator">
+                <input type="number" id="num1" placeholder="First number">
+                <select id="operation">
+                    <option value="add">+</option>
+                    <option value="subtract">-</option>
+                    <option value="multiply">×</option>
+                    <option value="divide">÷</option>
+                </select>
+                <input type="number" id="num2" placeholder="Second number">
+                <button onclick="calculate()">Calculate</button>
+                <div id="result"></div>
+            </div>
+        </section>
+        
+        <section class="status-section">
+            <h2>Build Status</h2>
+            <div id="build-info">
+                <p>Built with ❤️ using GitHub Actions</p>
+                <p>Last deployed: <span id="deploy-time"></span></p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 DevOps Demo Project</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
