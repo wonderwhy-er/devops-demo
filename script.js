@@ -61,11 +61,13 @@ function divide(a, b) {
     return a / b;
 }
 
-// Set deployment time
-document.addEventListener('DOMContentLoaded', function() {
-    const deployTime = document.getElementById('deploy-time');
-    deployTime.textContent = new Date().toLocaleString();
-});
+// Set deployment time (only in browser environment)
+if (typeof document !== 'undefined') {
+    document.addEventListener('DOMContentLoaded', function() {
+        const deployTime = document.getElementById('deploy-time');
+        deployTime.textContent = new Date().toLocaleString();
+    });
+}
 
 // Export functions for testing (Node.js environment)
 if (typeof module !== 'undefined' && module.exports) {
